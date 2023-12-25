@@ -807,6 +807,34 @@ background: transparent;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Default styles for larger screens */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-box {
+    width: 30%; /* Adjust the width according to your design */
+    margin: 1.5%;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .portfolio-box {
+        width: 48%; /* Adjust the width for smaller screens */
+        margin: 1%;
+    }
+}
+
+/* Media query for even smaller screens, like mobile phones */
+@media only screen and (max-width: 480px) {
+    .portfolio-box {
+        width: 100%; /* Full width for mobile screens */
+        margin: 2% 0;
+    }
+}
+
 .hover-effect:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px aqua;
@@ -851,11 +879,33 @@ background: transparent;
     opacity: 0;
     transition: opacity 0.3s;
 }
+@media only screen and (min-width: 601px) {
+    /* Adjust styles for larger screens here */
+    .projects-container {
+        /* For example, keep a row layout for larger screens */
+        flex-direction: row;
+        /* Add other specific styles for larger screens */
+    }
+
+    .project-box {
+        /* Add specific styles for project boxes on larger screens */
+        margin-right: 20px;
+    }
+}
 
 .hover-effect:hover .overlay-text {
     opacity: 1;
 }
+@media only screen and (max-width: 600px) {
+    .profiles-container {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .profile-box {
+        margin-bottom: 20px;
+    }
+}
 @media only screen and (min-width: 768px) {
     /* Styles for larger screens go here */
     header {
@@ -1231,7 +1281,7 @@ background: transparent;
         <div class="profile-box">
             <h3>HackerRank</h3>
             <p>Exlore My Problem olving Capability on Coding  platform:</p>
-            <a href="https://www.hackerrank.com/profile/sainagabharatre1" class="btn" target="_blank">Visit HackerRankProfile</a>
+            <a href="https://www.hackerrank.com/profile/sainagabharatre1" class="btn" target="_blank">Visit HackerRank</a>
         </div>
     </div>
 </section>
