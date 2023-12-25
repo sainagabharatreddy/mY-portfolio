@@ -682,6 +682,7 @@ background: transparent;
     transition: opacity 0.3s;
 }
 
+
 .portfolio-box:hover .overlay-text {
     opacity: 1;
 }
@@ -756,6 +757,59 @@ background: transparent;
     }
 
     /* Add more styles for other sections as needed */
+}
+@media only screen and (max-width: 767px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #1f2428;
+        z-index: 1;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        padding: 2rem 6%;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+/* Common hover effects for all sections */
+.hover-effect {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px aqua;
 }
 
 @media only screen and (min-width: 768px) {
@@ -887,15 +941,19 @@ background: transparent;
 <body>
     
     <script>
-       
-      
-        
-        
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.getElementById("menu");
+            const navbar = document.querySelector(".navbar");
+
+            menuIcon.addEventListener("click", function () {
+                navbar.classList.toggle("show");
+            });
+        });
     </script>
    
       <header>
         <a href="" class="logo" >Portfolio</a>
-        <box-icon name='menu' id="menu"></box-icon> 
+        <box-icon name='menu' class="menu" id="menu">I</box-icon> 
 
         <nav class="navbar">
             <a href="#home">Home</a>
