@@ -729,7 +729,121 @@ background: transparent;
     position: absolute;
     animation: scrollAnimation 5s linear infinite; /* Adjust the animation duration as needed */
 }
+@media only screen and (max-width: 767px) {
+    /* Styles for small screens go here */
+    header {
+        padding: 1rem 3%;
+    }
 
+    .services-container .services-box,
+    .profiles-container .profile-box,
+    .portfolio-container .portfolio-box {
+        flex: 1 1 100%;
+    }
+
+    /* Add more styles for other sections as needed */
+}
+@media only screen and (max-width: 767px) {
+    /* Styles for small screens go here */
+    header {
+        padding: 1rem 3%;
+    }
+
+    .services-container .services-box,
+    .profiles-container .profile-box,
+    .portfolio-container .portfolio-box {
+        flex: 1 1 100%;
+    }
+
+    /* Add more styles for other sections as needed */
+}
+
+@media only screen and (min-width: 768px) {
+    /* Styles for larger screens go here */
+    header {
+        padding: 2rem 6%;
+    }
+
+    .services-container .services-box {
+        flex: 1 1 30%;
+    }
+
+    .profiles-container .profile-box,
+    .portfolio-container .portfolio-box {
+        flex: 1 1 calc(33.333% - 2rem);
+    }
+
+    /* Add more styles for other sections as needed */
+}
+
+/* Common hover effects for all sections */
+.hover-effect {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px aqua;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aqua;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-effect:hover .overlay-text {
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    /* Styles for larger screens go here */
+    header {
+        padding: 2rem 6%;
+    }
+
+    .services-container .services-box {
+        flex: 1 1 30%;
+    }
+
+    .profiles-container .profile-box,
+    .portfolio-container .portfolio-box {
+        flex: 1 1 calc(33.333% - 2rem);
+    }
+
+    /* Add more styles for other sections as needed */
+}
+@media only screen and (max-width: 767px) {
+    
+    header {
+        padding: 1rem 3%;
+    }
+
+    .services-container .services-box {
+        flex: 1 1 100%;
+    }
+    
+    
+}
+
+@media only screen and (min-width: 768px) {
+   
+    header {
+        padding: 2rem 6%;
+    }
+
+    .services-container .services-box {
+        flex: 1 1 30%;
+    }
+
+    /* Add more styles for other sections as needed */
+}
 @keyframes scrollAnimation {
     0% {
         transform: translateX(-100%) rotate(0deg); /* Initial rotation angle */
@@ -795,7 +909,7 @@ background: transparent;
       </header>
 
 
-      <section class="home" id="home">
+      <section class="home" id="home" hover-effect>
         <div class="home-content">
             <h3 class="h3">Hello, it's me</h3>
             <h1><span style="color: aqua;">B.SaiNagaBharatReddy</span></h1>
@@ -849,7 +963,7 @@ background: transparent;
 
 
     
-<section class="skills" id="skills">
+<section class="skills" id="skills" hover-effect>
     <div class="skills-container">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-list">
