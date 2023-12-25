@@ -47,6 +47,100 @@ header{
     z-index: 100;
     border: 1px solid aqua;
 }
+.portfolio-box {
+    position: relative;
+    /* Add other styles as needed */
+}
+
+.technologies-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.technologies-info p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/* Add this CSS to your existing styles */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services-box {
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #373738;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.services-box:hover {
+    transform: scale(1.05);
+}
+
+.services-box i {
+    font-size: 3rem;
+    color: aqua;
+}
+
+.nod {
+    font-size: 2rem;
+    color: aqua;
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.services-box a.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: aqua;
+    border-radius: 4px;
+    color: #070707;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: background-color 0.3s;
+}
+
+.services-box a.btn:hover {
+    background-color: #070707;
+    color: aqua;
+}
+
+/* Add this animation effect to the h1 */
+.heading span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: aqua;
+    transition: width 0.3s;
+}
+
+.heading:hover span::after {
+    width: 100%;
+}
+
 .home-content {
     text-align: center;
     max-width: 800px;
@@ -55,6 +149,98 @@ header{
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
 }
+/* Add this to your existing CSS */
+/* Updated CSS for Skills Section */
+.skills {
+    background-color: #242a2f;
+    color: #fff;
+    padding: 5rem 7%;
+    text-align: center;
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills h2 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-category {
+    width: 300px;
+    background-color: #373738;
+    margin: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.skill-category:hover {
+    transform: scale(1.05);
+}
+
+.skill-category h3 {
+    font-size: 2rem;
+    color: aqua;
+    padding: 1rem;
+    margin: 0;
+}
+
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background: #373738;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    color: aqua;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Add this to your existing CSS */
+.heading {
+    position: relative;
+    display: inline-block;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Adjust the height of the underline as needed */
+    background-color: aqua;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.heading:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.skills-list li:hover {
+    background-color: aqua;
+    color: #070707;
+}
+
+
 
 .home:hover .home-content {
     opacity: 1;
@@ -271,6 +457,10 @@ margin: 3rem 1.5rem 3rem 0 ;
     background-color: #242a2f;
 }
 
+.a{
+    list-style: none;
+    color: #ebebf1;
+}
 .heading{
     text-align: center;
     font-size: 5rem;
@@ -355,6 +545,7 @@ margin: 3rem 1.5rem 3rem 0 ;
 }
 .portfolio-box img{
     width: 100%;
+    height: 250px;
 
 }
 .portfolio-box .portfolio-layer{
@@ -580,33 +771,12 @@ background: transparent;
    
 </head>
 <body>
+    
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var servicesBoxes = document.querySelectorAll('.services-box');
-
-            function isInViewport(element) {
-                var rect = element.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
-            }
-
-            function handleScroll() {
-                servicesBoxes.forEach(function (box) {
-                    if (isInViewport(box)) {
-                        box.classList.add('in-viewport');
-                    }
-                });
-            }
-
-           
-            handleScroll();
-
-            window.addEventListener('scroll', handleScroll);
-        });
+       
+      
+        
+        
     </script>
    
       <header>
@@ -616,9 +786,10 @@ background: transparent;
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#portfolio">Projects</a>
-            <a href="#service">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#service">Services</a> 
+            <a href="mailto:sainagabharatreddy@gmail.com"> ContactMe : mail-me</a>
 
         </nav>
       </header>
@@ -633,13 +804,13 @@ background: transparent;
                 Hello and welcome to my portfolio! I am a passionate and skilled Full Stack Developer with a strong background in web development.
             </h5>
             <div class="social-media">
-                <a href="#"><i class='bx bxl-facebook'></i></a> 
-                <a href="#"><i class='bx bxl-instagram'></i></a> 
-                <a href="#"><i class='bx bxl-linkedin-square'></i></a> 
+                <a href="#home"><i class='bx bxl-facebook'></i></a> 
+                <a href="https://www.instagram.com/sai_naga_bharat/"><i class='bx bxl-instagram'></i></a> 
+                <a href="https://www.linkedin.com/in/sainagabharat/"><i class='bx bxl-linkedin-square'></i></a> 
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="resume (4) (1).pdf" class="btn" download="">Download CV</a>
         </div>
-        <div class="home-img"></div>
+        
     </section>
     
 
@@ -661,13 +832,13 @@ background: transparent;
                 My technical expertise includes using technologies such as HTML, CSS, JavaScript, React, Node.js, Spring Boot, and various databases including MySQL and MongoDB.
                 I am particularly skilled in building responsive and user-friendly interfaces, designing RESTful APIs, and ensuring seamless communication between front-end and back-end systems.
             </p>
-            <h3>Skills and Technologies</h3>
+            <h3>Skills and Technologies bref Explanation</h3>
             <p>
                 <strong>Front-End:</strong> HTML, CSS, JavaScript, React.js<br>
                 <strong>Back-End:</strong> Node.js, Spring Boot<br>
                 <strong>Databases:</strong> MySQL, MongoDB<br>
                 <strong>Version Control:</strong> Git<br>
-                <strong>Other:</strong> RESTful API design, Responsive Web Design
+                <strong>Other:</strong> RESTful API design, Responsive Web Design, MVC Architecture, MicroServices
             </p>
             <h3>Let's Collaborate!</h3>
             <p>
@@ -675,8 +846,74 @@ background: transparent;
             </p>
         </div>
     </section>
-    
 
+
+    
+<section class="skills" id="skills">
+    <div class="skills-container">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-list">
+            <div class="skill-category">
+                <h3>Programming Languages :</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>PhP</li>
+                   
+                </ul>
+                <h3>Web Technologies:</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JSON</li>
+                    <li>XML</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Frame works Technologies: </h3>
+                <ul>
+                    
+                    <li>React.js</li>
+                    <li>Next.js</li>
+                    <li>Node js</li>
+                    <li>Exress.js</li>
+                    <li>Django</li>
+                    <li>Tailwind Css</li>
+                    <li>Bootstrap FrameWork</li>
+                    <li>Sringboot</li>
+                    
+
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Database Management:</h3>
+
+                <ul>
+                    <li>MySql</li>
+
+                    <li>MongoDB</li>
+                    <li>Postgre sql</li>
+
+                </ul>
+               
+            </div>
+            <div class="skill-category">
+                <h3>Develoment tools:</h3>
+
+                <ul>
+                    <li>Postman API</li>
+                    <li>Insomnia</li>\
+                    <li>Eclise IDEA</li>
+                    <li>Intellij IDEA</li>
+                    <li>Microsoft Vs-Code</li>
+
+                </ul>
+               
+            </div>
+            
+        </div>
+    </div>
+</section>
 
 
     <div class="scrolling-line">
@@ -685,130 +922,44 @@ background: transparent;
     
     
 
-   <section class="services" id="service">
-    <h2 class="heading">
-        Our <span>Services</span>
-
-    </h2>
-    <div class="services-container">
-        <div class="services-box">
-                    <i class='bx bx-code-alt'></i><br>
-                    <h1 class="nod">  Web-Development: </h1> <br><br>
-                    <br>
-                    <p>
-                        <h1 class="nod">  Front-End Development: </h1> 
-
-HTML, CSS, JavaScript: Solid foundation in building responsive and visually appealing user interfaces.
-JavaScript Frameworks: Experienced with React.js, Angular, and Vue.js for creating dynamic single-page applications.
-Ensured seamless user experiences across various devices by implementing responsive design principles and mobile-first development.
-Back-End Development:
-
-<h1 class="nod">  Back-End Development: </h1> 
-Server-Side Languages: Proficient in server-side languages such as Node.js, Java (Spring Boot), and Python (Django).
-RESTful APIs: Design and implementation of RESTful APIs for seamless communication between front-end and back-end systems.
-Real-Time Applications:
-
-Developed real-time features using WebSocket communication for instant data updates.
-
-
-<h1 class="nod">  Data Base Management: </h1> 
-
-
-SQL and NoSQL Databases: Experience with relational databases like MySQL and PostgreSQL, as well as NoSQL databases like MongoDB.
-Version Control and Collaboration:
-<h1 class="nod">  The Version Control: </h1> 
-Git: Strong version control skills for efficient collaboration and codebase management.
-Proficient in using Git for version control, collaborating with cross-functional teams to manage codebase changes efficiently.
-Agile Development: Experience working in agile environments, collaborating with cross-functional teams..</p>
-                        <br><br>
-                        <br>
-                    <a href="https://blog.hubspot.com/website/website-development" class="btn">Read more</a>
-        </div>
-        <div class="services-box">
-                        <i class='bx bx-code-alt'></i><br>
-                        <h1 class="nod">  BackEnd-Development: </h1> <br><br>
-                        <br>
-                        <p>
-                            
-                           <h1 class="nod">Node.js , Spring boot:</h1> 
-                           <h1 class="nod">Node js Over View:</h1> 
-
-Proficient in building high-performance and scalable backend applications using Both languages.
-Skilled in leveraging the asynchronous nature of Node.js for efficient and non-blocking I/O operations.
-2. Key Skills:
-
-Node.js: Extensive experience in server-side JavaScript development.
-Express.js: Proficient in using the Express.js framework for building robust and modular APIs.
-
-
-
-<h1 class="nod">Spring Boot:Key Skills:
-    Java/Spring Boot:</h1> 
-Extensive experience in developing backend services using Java with the Spring Boot framework.
-Proficient in using Spring features like dependency injection, data access, and AOP.
-RESTful APIs:
-
-Designed and implemented RESTful APIs for seamless communication between front-end and back-end systems.
-Implement
-
-Project Name 1: [Crud Opreations]
-
-Implemented real-time features using WebSocket communication in a spring boot backend.
-Integrated with various external services for data enrichment.
-Project Name 2: [E-commers]
-
-Developed RESTful APIs with spring boot, focusing on maintainability and ease of integration.
-Implemented middleware for authentication and request validation.
-
-4. Achievements:
-
-Enhanced the scalability of a Spring boot application, supporting a tenfold increase in concurrent users.
-Successfully integrated a third-party payment gateway, ensuring secure and seamless transactions.
-
-                         
-                        </p>
-                        <br><br>
-                        <br>
-                        <a href="https://spring.io/projects/spring-boot" class="btn">Read more</a>
+  
+    <section class="services" id="service">
+        <h2 class="heading">
+            Our <span>Services</span>
+        </h2>
+        <div class="services-container">
+            
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h1 class="nod">Front-End Development</h1>
+                <p>
+                    Craft beautiful and responsive user interfaces using HTML, CSS, and JavaScript. Specialized in modern frameworks like React.js, Angular, and Vue.js to create dynamic single-page applications.
+                </p>
+                <a href="#" class="btn">Read more</a>
             </div>
 
+           
             <div class="services-box">
-                        <i class='bx bx-code-alt'></i><br>
-                        <h1 class="nod">  FrontEnd-Development: </h1><br><br>
-                        <br>
-                        <p>
-                            <h1 class="nod">  Front-End Development: </h1> 
-                            
+                <i class='bx bx-code-alt'></i>
+                <h1 class="nod">Full Stack Development</h1>
+                <p>
+                    Expertise in both front-end and back-end development, ensuring a comprehensive understanding of the entire web development stack. Proficient in managing databases, version control, and collaboration in agile environments.
+                </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h1 class="nod">Back-End Development</h1>
+                <p>
+                    Build robust server-side applications using Node.js, Java (Spring Boot), and Python (Django). Design and implement RESTful APIs for seamless communication between front-end and back-end systems.
+                </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
 
-                            Absolutely, describing your front-end development experience is crucial for your portfolio. Here's a template to help you showcase your skills and projects:
-
-                            Front-End Development
-                            Overview:
-                            Highly skilled front-end developer with a focus on creating intuitive and visually appealing user interfaces.
-                             <h1 class="nod">Key Skills: </h1> 
-                            HTML/CSS/JavaScript: Proficient in the core technologies of web development, ensuring cross-browser compatibility and responsive design.
-                            React.js: Expertise in modern JavaScript frameworks for building dynamic and efficient single-page applications.
-                            <h1 class="nod">Projects: </h1> 
-                            Project Name 1: [Net flix Clone]
-                            
-                            Developed a responsive and user-friendly interface using React.js, enhancing the overall user experience.
-                            Implemented state management for complex UI components to ensure seamless data flow.
-                            Project Name 2: [React food search ]
-                            
-                            Utilized React to create a modular and maintainable front-end architecture for a large-scale enterprise application.
-                            Integrated RESTful APIs for data retrieval, ensuring optimal performance.
-
-                           <h1 class="nod"> UI/UX Design:</h1> 
-Collaborated with design teams to translate wireframes and mockups into interactive and visually appealing web applications.
-Implemented design principles and best practices to create consistent and aesthetically pleasing user interfaces.
-
-                            <br><br>
-                        <br>
-                        <a href="https://react.dev/learn" class="btn">Read more</a>
-    </div>
             
-    </div>
-   </section>
+            
+        </div>
+    </section>
 
 
 
@@ -822,45 +973,69 @@ Implemented design principles and best practices to create consistent and aesthe
 <section class="portfolio" id="portfolio">
     <h2 class="heading">Latest<span>Projects</span></h2>
     <div class="portfolio-container">
-        <div class="portfolio-box">
-            <img src="portfolio2.jpg" alt="unable">
+        <div class="portfolio-box" onmouseover="showTechnologies(this)" onmouseout="hideTechnologies(this)">
+            <img src="download.jpeg" alt="unable">
             <div class="portfolio-layer">
-                <h3>Food searching (Using API)</h3>
+                <h3><a href="https://github.com/sainagabharatreddy/ecommerce" class="a">E-commerce (Mern stack)</a></h3>
+                <div class="technologies-info">
+            
+                    <p>React,Reduc, Node.js, Express, MongoDB, Strie Integration, NodeMailer, Versel</p>
+                </div>  
             </div>
         </div>
-        <div class="portfolio-box">
+        <div class="portfolio-box" onmouseover="showTechnologies(this)" onmouseout="hideTechnologies(this)">
+            <img src="download (1).png" alt="unable">
+            <div class="portfolio-layer">
+                <h3><a href="https://github.com/sainagabharatreddy/SpringBoot-CRUD---Operations" class="a">CRUD Operation - SpringBoot</a></h3>
+                <div class="technologies-info">
+            
+                    <p>React js , Json , SpringBoot , Mysql</p>
+                </div>  
+            </div>
+        </div>
+        <div class="portfolio-box" onmouseover="showTechnologies(this)" onmouseout="hideTechnologies(this)">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXdWhkV5-x7-Lf0kR6D1JaeP2YgTQpMYDjgA&usqp=CAU" alt="unable">
+            <div class="portfolio-layer">
+                <h3><a href="https://github.com/sainagabharatreddy/React-FoodSearchUsingApi" class="a">Food searching (Using API)</a></h3>
+                <div class="technologies-info">
+            
+                    <p>React, Javascript, Edmam API integration, css </p>
+                </div>  
+            </div>
+        </div>
+        <div class="portfolio-box" onmouseover="showTechnologies(this)" onmouseout="hideTechnologies(this)">
             <img src="portfolio3.jpg" alt="unable">
             <div class="portfolio-layer">
-                <h3>Edu-tech (Educational platform to learn)</h3>
+                <h3><a href="https://github.com/sainagabharatreddy/EducationalPlatform-students" class="a">Edu-tech (Educational platform to learn)</a></h3>
+                <div class="technologies-info">
+            
+                    <p>Web technologies , php , Apache Server, mysql</p>
+                </div>  
             </div>
         </div>
         <div class="portfolio-box">
-            <img src="portfolio4.jpg" alt="unable">
+            <img src="data:image/png;base64,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" alt="unable">
             <div class="portfolio-layer">
-                <h3>Exercise tracking  (Only backend application)</h3>
+                <h3><a href="https://github.com/sainagabharatreddy/NetflixClone" class="a">NetFlix Clone</a></h3>
+                <div class="technologies-info">
+            
+                    <p> Web Technologies Languages</p>
+                </div>  
             </div>
         </div>
-        <div class="portfolio-box">
-            <img src="portfolio6.jpg" alt="unable">
+        <div class="portfolio-box" onmouseover="showTechnologies(this)" onmouseout="hideTechnologies(this)">
+            <img src="data:image/jpeg;base64,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" alt="unable">
             <div class="portfolio-layer">
-                <h3>basic python project(AI navigation)</h3>
+                <h3><a href="https://github.com/sainagabharatreddy/AI" class="a">basic python project(AI navigation)</a></h3>
 
         </div>
-        <div class="portfolio-box">
-            <img src="download.png" alt="unable">
-            <div class="portfolio-layer">
-                <h3>Spring boot CRUD Operations</h3>
-
-        </div>
-        <div class="portfolio-box">
-            <img src="portfolio5.jpg" alt="unable" >
-            <div class="portfolio-layer">
-                <h3>Typing speed checker </h3>
-
-        </div>
-      </div>
+        <div class="technologies-info">
+            
+            <p>python</p>
+        </div>  
       
     </div>
+    
 </section>   
 <div class="scrolling-line">
     <div class="scrolling-box"></div>
@@ -881,6 +1056,11 @@ Implemented design principles and best practices to create consistent and aesthe
             <p>Connect with me and explore my professional network on LinkedIn.</p>
             <a href="https://www.linkedin.com/in/sainagabharat" class="btn" target="_blank">Visit LinkedIn</a>
         </div>
+        <div class="profile-box">
+            <h3>HackerRank</h3>
+            <p>Exlore My Problem olving Capability on Coding  platform:</p>
+            <a href="https://www.hackerrank.com/profile/sainagabharatre1" class="btn" target="_blank">Visit HackerRankProfile</a>
+        </div>
     </div>
 </section>
 <div class="scrolling-line">
@@ -900,7 +1080,7 @@ Implemented design principles and best practices to create consistent and aesthe
                 <input type="number" placeholder="Mobilenumber">
                
             </div>
-            <textarea name="" id="" cols="10" rows="10" placeholder="Your message"></textarea>
+            <textarea name="" id="" cols="5" rows="5" placeholder="Your message"></textarea>
             <input type="submit" value="submit" id="btn">
         </form>
     </section>
